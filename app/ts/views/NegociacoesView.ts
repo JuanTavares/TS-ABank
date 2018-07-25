@@ -7,12 +7,12 @@ class NegociacoesView {
         this._elemento = document.querySelector(seletor);
     }
 
-    update(): void {
+    update(model: Negociacoes): void {
 
-        this._elemento.innerHTML = this.template();
+        this._elemento.innerHTML = this.template(model);
     }
 
-    template(): string {
+    template(model: Negociacoes): string {
 
         return `
         <table class="table table-hover table-bordered">
