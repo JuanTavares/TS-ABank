@@ -36,4 +36,19 @@ export class NegociacaoController {
 
         this._mensagemView.update('Negociação adicionada com sucesso');
     }
+
+    private _ehDiaUtil(data: Date) {
+
+        return data.getDay() != DiaDaSemana.Sabado && data.getDay() != DiaDaSemana.Domingo;
+    }
+}
+
+enum DiaDaSemana {
+    Domingo,
+    Segunda,
+    Terca,
+    Quarta,
+    Quinta,
+    Sexta,
+    Sabado,
 }
