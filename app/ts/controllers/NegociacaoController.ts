@@ -1,6 +1,6 @@
 import { Negociacao, Negociacoes } from '../models/index';
 import { NegociacoesView, MensagemView } from '../views/index';
-import { logarTempoDeExecucao, domInject } from '../helpers/decorators/index';
+import { domInject } from '../helpers/decorators/index';
 
 export class NegociacaoController {
 
@@ -22,7 +22,6 @@ export class NegociacaoController {
         this._negociacoesView.update(this._negociacoes);
     }
 
-    @logarTempoDeExecucao()
     adiciona(event: Event) {
 
         event.preventDefault();
@@ -45,6 +44,12 @@ export class NegociacaoController {
         this._negociacoesView.update(this._negociacoes);
 
         this._mensagemView.update('Negociação adicionada com sucesso');
+    }
+
+    importarDados() {
+
+        alert('oi');
+
     }
 
     private _ehDiaUtil(data: Date) {
