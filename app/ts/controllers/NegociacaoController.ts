@@ -1,6 +1,6 @@
 import { Negociacao, Negociacoes, NegociacaoParcial } from '../models/index';
 import { NegociacoesView, MensagemView } from '../views/index';
-import { domInject } from '../helpers/decorators/index';
+import { domInject, throttle } from '../helpers/decorators/index';
 
 export class NegociacaoController {
 
@@ -46,6 +46,7 @@ export class NegociacaoController {
         this._mensagemView.update('Negociação adicionada com sucesso');
     }
 
+    @throttle()
     importarDados() {
 
         function isOK(res: Response) {
