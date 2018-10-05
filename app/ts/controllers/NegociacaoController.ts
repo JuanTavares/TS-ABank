@@ -1,4 +1,4 @@
-import { Negociacao, Negociacoes, NegociacaoParcial } from '../models/index';
+import { Negociacao, Negociacoes } from '../models/index';
 import { NegociacoesView, MensagemView } from '../views/index';
 import { domInject, throttle } from '../helpers/decorators/index';
 import { NegociacaoService } from '../services/index';
